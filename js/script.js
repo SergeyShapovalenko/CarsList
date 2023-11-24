@@ -2,20 +2,40 @@
 
 const menuBtn = document.querySelector('.menu__btn');
 const menuList = document.querySelector('.menu__list');
+const body = document.body || document.documentElement;
+const html = document.documentElement;
+
+function openMenu() {
+  setTimeout(() => {
+    body.classList.add('menu-open');
+    html.classList.add('menu-open');
+  }, 0);
+}
+
+function closeMenu() {
+  setTimeout(() => {
+    body.classList.remove('menu-open');
+    html.classList.remove('menu-open');
+  }, 0);
+}
 
 menuBtn.addEventListener('click', () => {
-  menuList.classList.toggle('menu__list--active')
+  menuList.classList.toggle('menu__list--active');
+  if (menuList.classList.contains('menu__list--active')) {
+    openMenu();
+  } else {
+    closeMenu();
+  }
 });
 
 document.addEventListener('click', function (e) {
   if (e.target !== menuBtn && e.target !== menuList) {
     menuList.classList.remove('menu__list--active');
+    closeMenu();
   }
 
   console.log(e.target);
 });
-
-
 
 
 // tabs
