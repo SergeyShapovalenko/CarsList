@@ -510,7 +510,7 @@ body {
   padding: 0;
 }
 
-.tabs__btn-item--active {
+.tabs__btn-item:focus {
   color: #0066FF;
 }
 
@@ -677,12 +677,12 @@ body {
   }
 
   .card__link {
-    transition: background-color color .3s ease;
+    transition: background-color .3s ease, color .3s ease;
   }
 
   .card__link:hover {
-    color: #fff;
     background-color: #0066FF;
+    color: #fff;
   }
 
   .blog__item-link {
