@@ -622,7 +622,7 @@ body {
     right: 0;
     bottom: 0;
     align-items: center;
-    transform: translateY(-100%);
+    transform: translateY(-200%);
     transition: transform .3s ease;
   }
 
