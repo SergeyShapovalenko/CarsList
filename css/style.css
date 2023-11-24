@@ -347,6 +347,7 @@ body {
 .important__list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .important__item-img {
@@ -605,7 +606,7 @@ body {
   .menu__list {
     position: absolute;
     z-index: 5; 
-    height: 100vh;
+    height: 50vh;
     padding-top: 200px;
     justify-content: none;
     background-color: #151515;
@@ -620,6 +621,10 @@ body {
     transition: transform .3s ease;
   }
 
+  .menu__btn span {
+    pointer-events: none;
+  }
+
   .menu__list.menu__list--active {
     transform: translateY(0%);
   }
@@ -632,6 +637,12 @@ body {
 
   .important__list {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .top__link::hover {
+    background-color: #000;
   }
 }
 
