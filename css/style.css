@@ -510,7 +510,7 @@ body {
   padding: 0;
 }
 
-.tabs__btn-item--active {
+.tabs__btn-item:focus {
   color: #0066FF;
 }
 
