@@ -425,6 +425,8 @@ body {
   font-weight: 400;
   padding: 13px 61px;
   margin: 0 auto;
+  border: none;
+  cursor: pointer;
 }
 
 /* blog */
@@ -674,11 +676,12 @@ body {
   }
 
   .card__link {
-    transition: color .3s ease;
+    transition: background-color color .3s ease;
   }
 
   .card__link:hover {
-    color: #151515;
+    color: #fff;
+    background-color: #0066FF;
   }
 
   .blog__item-link {
