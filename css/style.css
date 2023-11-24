@@ -460,7 +460,6 @@ body {
   font-weight: 700;
 }
 
-
 .blog__item-link {
   color: #fff;
   background-color: #0066FF;
@@ -510,8 +509,8 @@ body {
   padding: 0;
 }
 
-.tabs__btn-item:focus {
-  color: #0066FF;
+.tabs__btn-item--active {
+  color: #06F
 }
 
 .tabs__content-item {
