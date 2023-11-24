@@ -5,7 +5,18 @@ const menuList = document.querySelector('.menu__list');
 
 menuBtn.addEventListener('click', () => {
   menuList.classList.toggle('menu__list--active')
-})
+});
+
+document.addEventListener('click', function (e) {
+  if (e.target !== menuBtn && e.target !== menuList) {
+    menuList.classList.remove('menu__list--active');
+  }
+
+  console.log(e.target);
+});
+
+
+
 
 // tabs
 
