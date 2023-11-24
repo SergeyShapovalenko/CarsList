@@ -99,6 +99,7 @@ body {
   background-color: transparent;
   cursor: pointer;
   display: none;
+  transform: translateY(-125%);
 }
 
 .menu__btn span {
