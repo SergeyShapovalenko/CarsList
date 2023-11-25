@@ -507,6 +507,8 @@ body {
   border: none;
   background-color: transparent;
   padding: 0;
+  outline: none;
+  color: #000;
 }
 
 .tabs__btn-item--active {
