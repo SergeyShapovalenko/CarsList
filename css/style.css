@@ -505,12 +505,12 @@ body {
   font-weight: 700;
   cursor: pointer;
   border: none;
-  background-color: transparent;
+  background-color: white;
   padding: 0;
 }
 
 .tabs__btn-item--active {
-  color: #06F
+  color: #0066ff;
 }
 
 .tabs__content-item {
