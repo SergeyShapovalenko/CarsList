@@ -46,7 +46,7 @@ const tabContent = document.querySelectorAll('.tabs__content-item');
 tabItem.forEach(item => item.addEventListener("click", open));
 
 function open(evt) {
-  const tabTarget = evt.currentTarget;
+  const tabTarget = evt.target;
   const button = tabTarget.dataset.button;
 
   tabItem.forEach(function (item) {
