@@ -500,11 +500,6 @@ body {
   padding-bottom: 100px;
 }
 
-
-.tabs__btn-item--active {
-  color: #06F;
-}
-
 .tabs__btn-item {
   font-size: 24px;
   font-weight: 700;
@@ -514,6 +509,10 @@ body {
   padding: 0;
   outline: none;
   color: #000;
+}
+
+.tabs__btn-item--active {
+  color: #06F;
 }
 
 .tabs__content-item {
