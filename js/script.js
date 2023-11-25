@@ -43,37 +43,40 @@ document.addEventListener('click', function (e) {
 const tabItem = document.querySelectorAll('.tabs__btn-item');
 const tabContent = document.querySelectorAll('.tabs__content-item');
 
-tabItem.forEach(function (element) {
-  element.addEventListener('click', open)
-})
+tabItem.forEach(item => item.addEventListener("click", open));
 
 function open(evt) {
   const tabTarget = evt.currentTarget;
   const button = tabTarget.dataset.button;
 
-  tabItem.forEach(function(item) {
+  tabItem.forEach(function (item) {
     item.classList.remove('tabs__btn-item--active');
   })
 
   tabTarget.classList.add('tabs__btn-item--active');
 
-  tabContent.forEach(function(item){
+  tabContent.forEach(function (item) {
     item.classList.remove('tabs__content-item--active')
   });
 
-  document.querySelector(`#${button}`).classList.add('tabs__content-item--active');
+  const selectBtn = document.querySelector(`#${button}`);
+  if (selectBtn) {
+    selectBtn.classList.add('tabs__content-item--active');
+  }
 }
 
-
 //swiper
+const swiperHtml = document.querySelector(".swiper");
+if (swiperHtml) {
+  const swiper = new Swiper(".swiper", {
+    effect: "fade",
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });
+}
 
-const swiper = new Swiper(".swiper", {
-  effect: "fade",
-  pagination: {
-    el: ".swiper-pagination",
-  },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-});
